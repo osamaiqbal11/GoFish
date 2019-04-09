@@ -1,11 +1,20 @@
 //deck.cpp
 #include <deck.h>
 #include<iostream>
+#include<cstdlib>
+#include<stdio.h>
+#include<time.h>
 
 using namespace std;
 
 
 Deck::Deck(){                 // pristine, sorted deck
+
+    time_t time1;
+    time1 = time(NULL);
+
+    srand(time1);
+
     myCards[51];
     myIndex = 0;  // current card to deal
     int i = 0;
@@ -78,15 +87,10 @@ int  Deck::size() const {       // # cards left in the deck
 
 }
 
-void Deck::cardSwap(Card i, Card j){    // pass 2 ints 0-51;
+void Deck::cardSwap(Card i, Card j){    // pass 2 valid Cards;
     Card k;
-    k.setRank(i.getRank());
-    k.setSuit(i.getSuit());
-
-    i.setSuit(j.getSuit());
-    i.setRank(j.getRank());
-
-    j.setRank(k.getRank());
-    j.setSuit(k.getSuit());
+    k = i;
+    i = j;
+    j = k;
 
 }

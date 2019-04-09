@@ -60,7 +60,7 @@ int main( )
     Deck test;
 
     Card testC;
-
+    /*
     int i = 0;
     while(i<52) {
         cout<<i+1<<":";
@@ -69,6 +69,20 @@ int main( )
         cout << test.size()<<"\n";
         i++;
     }
+    */
+
+    test.shuffle();
+
+
+    int i = 0;
+    while(i<52) {
+        cout<<i+1<<":";
+        testC = test.dealCard();
+        cout << testC.toString() << "\n";
+        i++;
+    }
+
+
 
     /*
     void shuffle();   // shuffle the deck, all 52 cards present
