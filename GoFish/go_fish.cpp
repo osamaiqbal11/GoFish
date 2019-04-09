@@ -18,36 +18,45 @@ void dealHand(Deck &d, Player &p, int numCards);
 
 int main( )
 {
+/* testing Card Class and Functions
 
     Card testCard(2, Card::diamonds);
 
-
     cout<<testCard.getRank()<<"\n";
-
-
-    cout<<testCard.getSuit()<<"\n";
-
+    cout<<testCard.suitString(testCard.getSuit())<<"\n";
+    testCard.setRank(1);
+    testCard.setSuit(Card::clubs);
     cout<<testCard.toString()<<"\n";
-
+    cout<<testCard.rankString(testCard.getRank())<<"\n";
     cout<<"yyyyyyyyyyyyyy\n";
 
+    Card test;
+    Card test2(3, Card::diamonds);
+    Card test3;
 
-    /*
-    bool sameSuitAs(const Card& c) const;  // true if suit same as c
-    void setSuit(Suit s);
-    int  getRank()                 const;  // return rank, 1..13
-    void setRank(int r);
-    Suit getSuit();
-    string suitString(Suit s)      const;  // return "s", "h",...
+    if(test.sameSuitAs(test3))
+        cout<<"test1 pass\n";
+    else{
+        cout<<"test 1 fail\n";
+    }
 
-    string rankString(int r)       const;  // return "A", "2", ..."Q"
+    if(test == test2){
+        cout<<"test 2 fail\n";
+    }
+    else{
+        cout<<"test 2 pass\n";
+    }
 
+    if(test != test2){
+        cout<<"test 3 pass\n";
+    }
 
-
-    bool operator == (const Card& rhs) const;
-    bool operator != (const Card& rhs) const;
+    if(test == test3){
+        cout<<"test 4 pass\n";
+    }
 
     */
+
 
 
 
