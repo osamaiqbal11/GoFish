@@ -8,43 +8,37 @@ using namespace std;
 Deck::Deck(){                 // pristine, sorted deck
     myCards[51];
     myIndex = 0;  // current card to deal
-
     int i = 0;
+    int j = 1;
+    while(i < 13){
 
-    myCards[i].setRank(1);
-    myCards[i].setSuit(Card::clubs);
-
-    /*
-     int i = 0;
-     while(i < 14){
-         int j = 1;
          myCards[i].setSuit(Card::clubs);
          myCards[i].setRank(j);
          j++;
          i++;
-     }
-     while(i < 26){
-         int j= 1;
+    }
+    j = 1;
+    while(i < 26){
          myCards[i].setSuit(Card::diamonds);
          myCards[i].setRank(j);
          j++;
          i++;
-     }
-     while(i < 39){
-         int j = 1;
+    }
+    j= 1;
+    while(i < 39){
          myCards[i].setSuit(Card::hearts);
          myCards[i].setRank(j);
          j++;
          i++;
-     }
-     while(i < 52) {
-         int j = 1;
+    }
+    j = 1;
+    while(i < 52) {
          myCards[i].setSuit(Card::spades);
          myCards[i].setRank(j);
          j++;
          i++;
-     }
-     */
+    }
+
 }
 
 void Deck::shuffle(){         // shuffle the deck, all 52 cards present

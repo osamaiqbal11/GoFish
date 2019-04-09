@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-.././card.h
-iostream
--
-string
--
-
-C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/card.cpp
-card.h
--
-
 C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/card.h
 iostream
 -
