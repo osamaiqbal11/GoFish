@@ -169,4 +169,8 @@ void Card::setRank(int r){
 Card::Suit Card::getSuit(){
     return(mySuit);
 }
-
+//
+Card::Card(const Card &c){
+    mySuit = c.mySuit;
+    myRank = c.myRank;
+}

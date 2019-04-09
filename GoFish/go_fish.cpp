@@ -60,17 +60,6 @@ int main( )
     Deck test;
 
 
-    cout<<test.size()<<"\n";
-
-    Card testC;
-
-    testC = test.dealCard();
-    cout<< testC.toString()<<"\n";
-
-    testC = test.dealCard();
-    cout<< testC.toString()<<"\n";
-
-
     /*
     Deck();           // pristine, sorted deck
 

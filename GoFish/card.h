@@ -49,6 +49,7 @@ public:
 
     string rankString(int r)       const;  // return "A", "2", ..."Q"
 
+    Card(const Card &c);
 
 
     bool operator == (const Card& rhs) const;

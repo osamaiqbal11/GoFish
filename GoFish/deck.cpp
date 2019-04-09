@@ -11,37 +11,40 @@ Deck::Deck(){                 // pristine, sorted deck
 
     int i = 0;
 
+    myCards[i].setRank(1);
+    myCards[i].setSuit(Card::clubs);
+
+    /*
+     int i = 0;
      while(i < 14){
          int j = 1;
-         myCards[j].setSuit(Card::clubs);
-         myCards[j].setRank(i);
+         myCards[i].setSuit(Card::clubs);
+         myCards[i].setRank(j);
          j++;
          i++;
      }
      while(i < 26){
          int j= 1;
-         myCards[j].setSuit(Card::diamonds);
-         myCards[j].setRank(i);
+         myCards[i].setSuit(Card::diamonds);
+         myCards[i].setRank(j);
          j++;
          i++;
      }
      while(i < 39){
          int j = 1;
-         myCards[j].setSuit(Card::hearts);
-         myCards[j].setRank(i);
+         myCards[i].setSuit(Card::hearts);
+         myCards[i].setRank(j);
          j++;
          i++;
      }
-     i = 1;
      while(i < 52) {
          int j = 1;
-         myCards[j].setSuit(Card::spades);
-         myCards[j].setRank(i);
+         myCards[i].setSuit(Card::spades);
+         myCards[i].setRank(j);
          j++;
          i++;
      }
-
-
+     */
 }
 
 void Deck::shuffle(){         // shuffle the deck, all 52 cards present
@@ -55,20 +58,18 @@ void Deck::shuffle(){         // shuffle the deck, all 52 cards present
 }
 
 
-Card Deck::dealCard(){        // get a card, after 52 are dealt, fail
-    int deckSize = this->size();
-    if(deckSize != 0){
-        return(myCards[52-deckSize]);
-    }
-    else{
-        return(myCards[0]);
+Card Deck::dealCard() {        // get a card, after 52 are dealt, fail
+    if (size() != 0) {
+        myIndex++;
+        return (myCards[myIndex - 1]);
+    } else {
+        return (myCards[0]);
     }
 }
 
 int  Deck::size() const {       // # cards left in the deck
-    int size = 51 - (myIndex);
-
-    return(size+1);
+    int size = 52 - (myIndex);
+    return(size);
 
     /* 0 --------size= 51----cards in deck= 52
      * 1---------size= 50----cards in deck= 51
@@ -80,11 +81,6 @@ int  Deck::size() const {       // # cards left in the deck
      * 1 ----51
      * 0 ----fail
      */
-
-
-
-
-
 
 }
 
