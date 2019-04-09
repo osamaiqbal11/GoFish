@@ -74,7 +74,7 @@ int  Deck::size() const {       // # cards left in the deck
 
 }
 
-void cardSwap(Card i, Card j){    // pass 2 ints 0-51;
+void Deck::cardSwap(Card i, Card j){    // pass 2 ints 0-51;
     Card k;
     k.setRank(i.getRank());
     k.setSuit(i.getSuit());

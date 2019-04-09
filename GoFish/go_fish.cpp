@@ -18,6 +18,9 @@ void dealHand(Deck &d, Player &p, int numCards);
 
 int main( )
 {
+
+
+    /*
     int numCards = 5;
 
     Player p1("Joe");
@@ -33,6 +36,8 @@ int main( )
     cout << p2.getName() <<" has : " << p2.showHand() << endl;
 
     return EXIT_SUCCESS;
+
+     */
 }
 
 
