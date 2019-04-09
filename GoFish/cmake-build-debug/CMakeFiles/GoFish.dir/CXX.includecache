@@ -6,35 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/card.h
+.././card.h
 iostream
 -
 string
 -
 
-C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/deck.h
+.././deck.h
 card.h
-C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/card.h
+.././card.h
 
-C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/go_fish.cpp
-iostream
--
-cstdlib
--
-card.h
-C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/card.h
-player.h
-C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/player.h
+C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/deck.cpp
 deck.h
-C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/deck.h
-
-C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/player.h
+-
 iostream
 -
-string
--
-vector
--
-card.h
-C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/card.h
 

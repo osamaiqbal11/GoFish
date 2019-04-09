@@ -57,8 +57,28 @@ int main( )
 
     */
 
+    Deck test;
 
 
+    cout<<test.size()<<"\n";
+
+    Card testC;
+
+    testC = test.dealCard();
+    cout<< testC.toString()<<"\n";
+
+    testC = test.dealCard();
+    cout<< testC.toString()<<"\n";
+
+
+    /*
+    Deck();           // pristine, sorted deck
+
+    void shuffle();   // shuffle the deck, all 52 cards present
+    Card dealCard();   // get a card, after 52 are dealt, fail
+    void cardSwap(Card i, Card j); // pass 2 valid cards
+    int  size() const; // # cards left in the deck
+     */
 
     /*
     int numCards = 5;

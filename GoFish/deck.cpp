@@ -10,26 +10,37 @@ Deck::Deck(){                 // pristine, sorted deck
     myIndex = 0;  // current card to deal
 
     int i = 0;
-    while(i < 14){
-        myCards[i].setSuit(Card::clubs);
-        myCards[i].setRank(i);
-        i++;
-    }
-    while(i < 26){
-        myCards[i].setSuit(Card::diamonds);
-        myCards[i].setRank(i);
-        i++;
-    }
-    while(i < 39){
-        myCards[i].setSuit(Card::hearts);
-        myCards[i].setRank(i);
-        i++;
-    }
-    while(i < 52) {
-        myCards[i].setSuit(Card::spades);
-        myCards[i].setRank(i);
-        i++;
-    }
+
+     while(i < 14){
+         int j = 1;
+         myCards[j].setSuit(Card::clubs);
+         myCards[j].setRank(i);
+         j++;
+         i++;
+     }
+     while(i < 26){
+         int j= 1;
+         myCards[j].setSuit(Card::diamonds);
+         myCards[j].setRank(i);
+         j++;
+         i++;
+     }
+     while(i < 39){
+         int j = 1;
+         myCards[j].setSuit(Card::hearts);
+         myCards[j].setRank(i);
+         j++;
+         i++;
+     }
+     i = 1;
+     while(i < 52) {
+         int j = 1;
+         myCards[j].setSuit(Card::spades);
+         myCards[j].setRank(i);
+         j++;
+         i++;
+     }
+
 
 }
 
