@@ -56,24 +56,10 @@ int main( )
     }
 
     */
-
+/*
     Deck test;
-
     Card testC;
-    /*
-    int i = 0;
-    while(i<52) {
-        cout<<i+1<<":";
-        testC = test.dealCard();
-        cout << testC.toString() << "\n";
-        cout << test.size()<<"\n";
-        i++;
-    }
-    */
-
     test.shuffle();
-
-
     int i = 0;
     while(i<52) {
         cout<<i+1<<":";
@@ -81,15 +67,36 @@ int main( )
         cout << testC.toString() << "\n";
         i++;
     }
+*/
+
+
+
 
 
 
     /*
-    void shuffle();   // shuffle the deck, all 52 cards present
-    void cardSwap(Card i, Card j); // pass 2 valid cards
-    */
+    string getName() const;
 
-    /*
+    void addCard(Card c);  //adds a card to the hand
+    void bookCards(Card c1, Card c2);
+
+    Card chooseCardFromHand() const;
+
+    //Does the player have the card c in her hand?
+    bool cardInHand(Card c) const;
+
+    //Remove the card c from the hand and return it to the caller
+    Card removeCardFromHand(Card c);
+
+    string showHand() const;
+    string showBooks() const;
+
+    int getHandSize() const;
+    int getBookSize() const;
+
+*/
+
+/*
     int numCards = 5;
 
     Player p1("Joe");
@@ -101,12 +108,11 @@ int main( )
     dealHand(d, p1, numCards);
     dealHand(d, p2, numCards);
 
-    cout << p1.getName() <<" has : " << p1.showHand() << endl;
-    cout << p2.getName() <<" has : " << p2.showHand() << endl;
+    cout << p1.getName() <<" has : \n" << p1.showHand() << endl;
+    cout << p2.getName() <<" has : \n" << p2.showHand() << endl;
 
     return EXIT_SUCCESS;
-
-     */
+*/
 }
 
 

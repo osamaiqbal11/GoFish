@@ -11,6 +11,12 @@ Player::Player(){
     myName = "NAME";
 }
 
+Player::Player(string _name) {
+    myHand;
+    myBook;
+    myName = _name;
+}
+
 
 string Player::getName() const {
     return myName;
@@ -85,7 +91,7 @@ string Player::showHand() const{
     int i = 0;
     string returnString;
     while(i<myHand.size()){
-        cout<<myHand[i].toString();
+        cout<<myHand[i].toString()<<"\n";
         i++;
     }
 
