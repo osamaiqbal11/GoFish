@@ -19,6 +19,37 @@ void dealHand(Deck &d, Player &p, int numCards);
 int main( )
 {
 
+    Card testCard(2, Card::diamonds);
+
+
+    cout<<testCard.getRank()<<"\n";
+
+
+    cout<<testCard.getSuit()<<"\n";
+
+    cout<<testCard.toString()<<"\n";
+
+    cout<<"yyyyyyyyyyyyyy\n";
+
+
+    /*
+    bool sameSuitAs(const Card& c) const;  // true if suit same as c
+    void setSuit(Suit s);
+    int  getRank()                 const;  // return rank, 1..13
+    void setRank(int r);
+    Suit getSuit();
+    string suitString(Suit s)      const;  // return "s", "h",...
+
+    string rankString(int r)       const;  // return "A", "2", ..."Q"
+
+
+
+    bool operator == (const Card& rhs) const;
+    bool operator != (const Card& rhs) const;
+
+    */
+
+
 
     /*
     int numCards = 5;

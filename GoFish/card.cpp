@@ -1,15 +1,17 @@
 //card.cpp
 #include<card.h>
 
-Card::Card(){                           // default, ace of spades
+using namespace std;
 
-    Suit mySuit = spades;
-    int myRank = 1;
+
+Card::Card(){                           // default, ace of spades
+    mySuit = spades;
+    myRank = 1;
 }
 
 Card::Card(int rank, Suit s){
-    Suit mySuit = s;
-    int myRank = rank;
+    mySuit = s;
+    myRank = rank;
     /*  1 = A;
      *  11 = J;
      *  12 = Q;
@@ -19,37 +21,68 @@ Card::Card(int rank, Suit s){
 }
 
 string Card::toString()const{           // return string version e.g. Ac 4h Js
-
-    string card;
-    if(mySuit == spades){
-        card[1] = 's';
+    string returnString= "F";
+    string returnString1= "00";
+    switch(mySuit){
+        case spades:
+            returnString1 = "s";
+            break;
+        case clubs:
+            returnString1 = "c";
+            break;
+        case hearts:
+            returnString1 = "h";
+            break;
+        case diamonds:
+            returnString1 = "d";
+            break;
+        default:
+            returnString1 = "F";
     }
-    if(mySuit == diamonds){
-        card[1] = 'd';
+    switch(myRank){
+        case 1:
+            returnString = "A";
+            break;
+        case 2:
+            returnString = "2";
+            break;
+        case 3:
+            returnString = "3";
+            break;
+        case 4:
+            returnString = "4";
+            break;
+        case 5:
+            returnString = "5";
+            break;
+        case 6:
+            returnString = "6";
+            break;
+        case 7:
+            returnString = "7";
+            break;
+        case 8:
+            returnString = "8";
+            break;
+        case 9:
+            returnString = "9";
+            break;
+        case 10:
+            returnString = "10";
+            break;
+        case 11:
+            returnString = "J";
+            break;
+        case 12:
+            returnString = "Q";
+            break;
+        case 13:
+            returnString = "K";
+            break;
+        default:
+            returnString = "00";
     }
-    if(mySuit == clubs){
-        card[1] = 'c';
-    }
-    if(mySuit == hearts){
-        card[1] = 'h';
-    }
-    if(myRank == 1){
-        card[0] = 'A';
-    }
-    if(myRank == 11){
-        card[0] = 'J';
-    }
-    if(myRank == 12){
-        card[0] = 'Q';
-    }
-    if(myRank == 13){
-        card[0] = 'K';
-    }
-    if((myRank>1)&&(myRank<11)){
-        card[0] = myRank + '0';
-
-    }
-    return(card);
+    return(returnString + returnString1);
 
 }
 
@@ -64,7 +97,7 @@ bool Card::sameSuitAs(const Card& c) const{ // true if suit same as c
     }
 
 }
-int  Card::getRank()const{                  // return rank, 1..13
+int Card::getRank()const{                  // return rank, 1..13
     return(myRank);
 }
 
@@ -74,26 +107,26 @@ string Card::suitString(Suit s)const{       // return "s", "h",...
 
 
 string Card::rankString(int r)const{        // return "A", "2", ..."Q"
-    char c;
+    string c;
 
     if(r == 1){
-        c = 'A';
+        c = "A";
     }
     if(r == 11){
-        c = 'J';
+        c = "J";
     }
     if(r == 12){
-        c = 'Q';
+        c = "Q";
     }
     if(r == 13){
-        c = 'K';
+        c = "K";
     }
     if((r>1)&&(r<11)){
         c = r + '0';
 
     }
 
-    return("c");
+    return(c);
 }
 
 

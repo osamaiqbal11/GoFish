@@ -1,11 +1,14 @@
 //player.cpp
 #include "player.h"
 
-Player::Player(){
-    vector <Card> myHand;
-    vector <Card> myBook;
+using namespace std;
 
-    string myName = "NAME";
+
+Player::Player(){
+    myHand;
+    myBook;
+
+    myName = "NAME";
 }
 
 
@@ -60,7 +63,7 @@ bool Player::cardInHand(Card c) const{
         }
         i++;
     }
-
+    return(false);
 
 }
 
@@ -86,6 +89,8 @@ string Player::showHand() const{
         i++;
     }
 
+    return(returnString);
+
 }
 
 
@@ -96,6 +101,7 @@ string Player::showBooks() const{
         cout<<myBook[i].toString();
         i++;
     }
+    return(returnString);
 }
 
 int Player::getHandSize() const{

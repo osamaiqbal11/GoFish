@@ -2,9 +2,12 @@
 #include <deck.h>
 #include<iostream>
 
+using namespace std;
+
+
 Deck::Deck(){                 // pristine, sorted deck
-    Card myCards[51];
-    int myIndex = 0;  // current card to deal
+    myCards[51];
+    myIndex = 0;  // current card to deal
 
     int i = 0;
     while(i < 14){
@@ -47,7 +50,7 @@ Card Deck::dealCard(){        // get a card, after 52 are dealt, fail
         return(myCards[52-deckSize]);
     }
     else{
-        //failcase----------------------------------------------------------------------
+        return(myCards[0]);
     }
 }
 
