@@ -79,8 +79,8 @@ int main( )
     string Bname = Billy.getName();
     string Pname = Pops.getName();
 
-    cout<<Bname<<"\n";
-    cout<<Pname<<"\n";
+    //cout<<Bname<<"\n";
+    //cout<<Pname<<"\n";
 
     dealHand(Test, Billy, numCards);
     dealHand(Test, Pops, numCards);
@@ -89,44 +89,35 @@ int main( )
     cout<<"Billy's Hand\n";
     string bhand = Billy.showHand();
     cout<< bhand<<"\n";
-    cout<<"Billy's Books\n";
-    cout<<Billy.showBooks();
+    //cout<<"Billy's Books\n";
+    //cout<<Billy.showBooks();
     cout<<"Pops' Hand\n";
     string phand = Pops.showHand();
     cout<<phand<<"\n";
-    cout<<"Pops' Hand Size\n";
-    cout<<Pops.getHandSize()<<"\n";
+    //cout<<"Pops' Hand Size\n";
+    //cout<<Pops.getHandSize()<<"\n";
 
 
-
-    Card Holder;
-    Card Holder2;
-
-    Billy.addCard(Test.dealCard());
-    bhand = Billy.showHand();
-    cout<<"Billy's Hand\n";
-    cout<< bhand<<"\n";
+    //Billy.addCard(Test.dealCard());
+    //bhand = Billy.showHand();
+    //cout<<"Billy's Hand\n";
+    //cout<< bhand<<"\n";
 
     Card holder;
     Card holder8;
 
-
     while(Billy.checkHandForBook(holder, holder8)){
         cout<<"Found a Pair\n";
-        //cout<<"Billy's Pair\n";
         cout<<holder.toString()<<"\n";
         cout<<holder8.toString()<<"\n";
         Card c = Billy.removeCardFromHand(holder);
         Card u = Billy.removeCardFromHand(holder8);
         cout<<"Billy's New Hand\n";
         cout<<Billy.showHand()<<"\n";
-        //Billy.bookCards(holder, holder8);
-        //bhand = Billy.showHand();
-        //string bbook = Billy.showBooks();
-        //cout<<"Billy's New Hand\n";
-        //cout<< bhand<<"\n";
-        //cout<<"Billy's Books\n";
-        //cout<<bbook<<"\n";
+        Billy.bookCards(holder, holder8);
+        string bbook = Billy.showBooks();
+        cout<<"Billy's Books\n";
+        cout<<bbook<<"\n";
     }
 
 

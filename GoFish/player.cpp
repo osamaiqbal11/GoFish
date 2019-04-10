@@ -48,17 +48,21 @@ bool Player::checkHandForBook(Card &c1, Card &c2){
         return(false);
     }
     else {
-        while (j < this->myHand.size()) {
-            if (this->myHand[i].getRank() == this->myHand[j].getRank()) {
-                if(this->myHand[i] != this->myHand[j]) {
-                    c1 = this->myHand[i];
-                    cout<<this->myHand[i].toString()<<"\n";
-                    c2 = this->myHand[j];
-                    cout<<this->myHand[j].toString()<<"\n";
-                    return (true);
+        while(i < (this->myHand.size()-1)) {
+            while (j < this->myHand.size()) {
+                if (this->myHand[i].getRank() == this->myHand[j].getRank()) {
+                    if (this->myHand[i] != this->myHand[j]) {
+                        c1 = this->myHand[i];
+                        cout << this->myHand[i].toString() << "\n";
+                        c2 = this->myHand[j];
+                        cout << this->myHand[j].toString() << "\n";
+                        return (true);
+                    }
                 }
+                j++;
             }
             i++;
+            j = i++;
         }
     }
     return(false);
