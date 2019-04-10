@@ -86,7 +86,7 @@ int main( )
     dealHand(Test, Pops, numCards);
 
 
-
+    cout<<"Billy's Hand\n";
     string bhand = Billy.showHand();
     cout<< bhand<<"\n";
     cout<<"Pops' Hand\n";

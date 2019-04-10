@@ -6,13 +6,23 @@
 
 #IncludeRegexTransform: 
 
-.././card.h
+C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/card.h
 iostream
 -
 string
 -
 
-C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/card.cpp
-card.h
+C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/player.cpp
+player.h
+C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/player.h
+
+C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/player.h
+iostream
 -
+string
+-
+vector
+-
+card.h
+C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/GoFish/GoFish/card.h
 
