@@ -76,7 +76,9 @@ bool Player::checkHandForBook(Card &c1, Card &c2){
 //uses some strategy to choose one card from the player's
 //hand so they can say "Do you have a 4?"
 Card Player::chooseCardFromHand() const{
-    return(myHand.front());
+    int random = rand()% this->myHand.size();
+
+    return(myHand[random]);
 
 
 }

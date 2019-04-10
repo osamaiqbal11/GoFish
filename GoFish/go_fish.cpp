@@ -102,7 +102,7 @@ int main( )
     //bhand = Billy.showHand();
     //cout<<"Billy's Hand\n";
     //cout<< bhand<<"\n";
-
+/*
     Card holder;
     Card holder8;
 
@@ -118,36 +118,37 @@ int main( )
         string bbook = Billy.showBooks();
         cout<<"Billy's Books\n";
         cout<<bbook<<"\n";
+        cout<<Billy.getBookSize()<<"\n";
     }
 
-
+*/
 /*
     Card temp = Test.dealCard();
-
     Billy.addCard(temp);
-
     Billy.showHand();
-
     if( Billy.cardInHand(temp)){
         cout<<"yes\n";
     }
 
-
 */
-    /*
 
-    string getName() const;
+
+    cout<<Billy.showHand()<<"\n";
+    cout<<Billy.chooseCardFromHand().toString()<<"\n";
+
+    /*
+    ---string getName() const;
     //Remove the card c from the hand and return it to the caller
-    Card removeCardFromHand(Card c);
+    ----Card removeCardFromHand(Card c);
     ----void addCard(Card c);  //adds a card to the hand
-    string showHand() const;
+    ----string showHand() const;
     ----string showBooks() const;
     ----int getHandSize() const;
     ----int getBookSize() const;
-    Card chooseCardFromHand() const;
+    ----Card chooseCardFromHand() const;
 
     //Does the player have the card c in her hand?
-    bool cardInHand(Card c) const;
+    ----bool cardInHand(Card c) const;
 
     ----bool checkHandForBook(Card &c1, Card &c2);
     ----void bookCards(Card c1, Card c2);
