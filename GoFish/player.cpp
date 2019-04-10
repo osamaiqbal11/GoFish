@@ -90,7 +90,7 @@ Card Player::chooseCardFromHand() const{
 bool Player::cardInHand(Card c) const{
     int i = 0;
     while(i<myHand.size()){
-        if(myHand[i] == c){
+        if(myHand[i].getRank() == c.getRank()){
             return(true);
         }
         i++;

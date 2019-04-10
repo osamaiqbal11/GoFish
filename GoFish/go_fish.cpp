@@ -25,12 +25,14 @@ int main( )
     Player Sam("Sam");
     Player Joe("Joe");
 
-    cout<<Bob.getName()<<"\n";
+    Players[0] = Bob;
+    Players[1] = Sam;
+    Players[2] = Joe;
 
-    Sam = Bob;
+    int numplayers = 3;
+    int turn = rand()%3;
 
-    cout<< Sam.getName()<<"\n";
-    //Players[0] =
+
 /* testing Card Class and Functions
 
     Card testCard(2, Card::diamonds);
