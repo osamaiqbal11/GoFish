@@ -41,7 +41,26 @@ void Player::bookCards(Card c1, Card c2){
 //this function will check a players hand for a pair.
 //If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
 
-//bool checkHandForBook(Card &c1, Card &c2);
+bool Player::checkHandForBook(Card &c1, Card &c2){
+    int i = 0;
+    int j = 1;
+    if(myHand.size()== 1){
+        return(false);
+    }
+    else {
+        while (j < myHand.size()) {
+            if (myHand[i].getRank() == myHand[j].getRank()) {
+                if(myHand[i] != myHand[j]) {
+                    c1 = myHand[i];
+                    c2 = myHand[j];
+                    return (true);
+                }
+            }
+            i++;
+        }
+    }
+    return(false);
+}
 
 //OPTIONAL
 // comment out if you decide to not use it
@@ -61,9 +80,8 @@ Card Player::chooseCardFromHand() const{
 
 //Does the player have the card c in her hand?
 bool Player::cardInHand(Card c) const{
-    int sizeofhand = myHand.size();
     int i = 0;
-    while(i<sizeofhand){
+    while(i<myHand.size()){
         if(myHand[i] == c){
             return(true);
         }
@@ -91,10 +109,10 @@ string Player::showHand() const{
     int i = 0;
     string returnString;
     while(i<myHand.size()){
-        cout<<myHand[i].toString()<<"\n";
+        //cout<<myHand[i].toString()<<"\n";
+        returnString = returnString + myHand[i].toString();
         i++;
     }
-
     return(returnString);
 
 }
@@ -104,7 +122,8 @@ string Player::showBooks() const{
     int i = 0;
     string returnString;
     while(i<myBook.size()){
-        cout<<myBook[i].toString();
+        //cout<<myBook[i].toString()<<"\n";
+        returnString = returnString + myBook[i].toString();
         i++;
     }
     return(returnString);

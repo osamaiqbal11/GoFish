@@ -21,8 +21,8 @@ Card::Card(int rank, Suit s){
 }
 
 string Card::toString()const{           // return string version e.g. Ac 4h Js
-    string returnString= "F";
-    string returnString1= "00";
+    string returnString= "00";
+    string returnString1= "F";
     switch(mySuit){
         case spades:
             returnString1 = "s";

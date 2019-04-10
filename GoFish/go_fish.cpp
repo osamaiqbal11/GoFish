@@ -68,31 +68,91 @@ int main( )
         i++;
     }
 */
+    int numCards = 7;
+
+    Deck Test;
+    Test.shuffle();
+
+    Player Billy("Billy");
+    Player Pops("Pops");
+
+    string Bname = Billy.getName();
+    string Pname = Pops.getName();
+
+    cout<<Bname<<"\n";
+    cout<<Pname<<"\n";
+
+    dealHand(Test, Billy, numCards);
+    dealHand(Test, Pops, numCards);
 
 
 
+    string bhand = Billy.showHand();
+    cout<< bhand<<"\n";
+    cout<<"Pops' Hand\n";
+    string phand = Pops.showHand();
+    cout<<phand<<"\n";
+
+    Card Holder;
+    Card Holder2;
+
+    Billy.addCard(Test.dealCard());
+    bhand = Billy.showHand();
+    cout<<"Billy's Hand\n";
+    cout<< bhand<<"\n";
+
+    Card holder;
+    Card holder8;
+
+
+    while(Billy.checkHandForBook(holder, holder8)){
+        cout<<"Found a Pair\n";
+        cout<<"Billy's Pair\n";
+        cout<<holder.toString()<<"\n";
+        cout<<holder8.toString()<<"\n";
+        Card c = Billy.removeCardFromHand(holder);
+        Card u = Billy.removeCardFromHand(holder8);
+        Billy.bookCards(holder, holder8);
+        bhand = Billy.showHand();
+        string bbook = Billy.showBooks();
+        cout<<"Billy's New Hand\n";
+        cout<< bhand<<"\n";
+        cout<<"Billy's Books\n";
+        cout<<bbook<<"\n";
+    }
+
+
+
+    Card temp = Test.dealCard();
+
+    Billy.addCard(temp);
+
+    Billy.showHand();
+
+    if( Billy.cardInHand(temp)){
+        cout<<"yes\n";
+    }
 
 
 
     /*
+
     string getName() const;
-
-    void addCard(Card c);  //adds a card to the hand
-    void bookCards(Card c1, Card c2);
-
+    //Remove the card c from the hand and return it to the caller
+    ----Card removeCardFromHand(Card c);
+    ----void addCard(Card c);  //adds a card to the hand
+    ----string showHand() const;
+    ----string showBooks() const;
+    ----int getHandSize() const;
+    ----int getBookSize() const;
     Card chooseCardFromHand() const;
 
     //Does the player have the card c in her hand?
     bool cardInHand(Card c) const;
 
-    //Remove the card c from the hand and return it to the caller
-    Card removeCardFromHand(Card c);
+    ----bool checkHandForBook(Card &c1, Card &c2);
+    ----void bookCards(Card c1, Card c2);
 
-    string showHand() const;
-    string showBooks() const;
-
-    int getHandSize() const;
-    int getBookSize() const;
 
 */
 
