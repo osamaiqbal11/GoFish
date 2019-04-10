@@ -68,6 +68,7 @@ int main( )
         i++;
     }
 */
+/*
     int numCards = 7;
 
     Deck Test;
@@ -102,6 +103,8 @@ int main( )
     //bhand = Billy.showHand();
     //cout<<"Billy's Hand\n";
     //cout<< bhand<<"\n";
+
+*/
 /*
     Card holder;
     Card holder8;
@@ -131,12 +134,7 @@ int main( )
     }
 
 */
-
-
-    cout<<Billy.showHand()<<"\n";
-    cout<<Billy.chooseCardFromHand().toString()<<"\n";
-
-    /*
+/*
     ---string getName() const;
     //Remove the card c from the hand and return it to the caller
     ----Card removeCardFromHand(Card c);
@@ -155,7 +153,6 @@ int main( )
 
 
 */
-
 /*
     int numCards = 5;
 

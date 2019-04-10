@@ -53,9 +53,9 @@ bool Player::checkHandForBook(Card &c1, Card &c2){
                 if (this->myHand[i].getRank() == this->myHand[j].getRank()) {
                     if (this->myHand[i] != this->myHand[j]) {
                         c1 = this->myHand[i];
-                        cout << this->myHand[i].toString() << "\n";
+                        //cout << this->myHand[i].toString() << "\n";
                         c2 = this->myHand[j];
-                        cout << this->myHand[j].toString() << "\n";
+                        //cout << this->myHand[j].toString() << "\n";
                         return (true);
                     }
                 }
