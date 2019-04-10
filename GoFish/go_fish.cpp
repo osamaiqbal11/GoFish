@@ -13,13 +13,22 @@ using namespace std;
 // PROTOTYPES for functions used by this demonstration program:
 void dealHand(Deck &d, Player &p, int numCards);
 
+int totalbooks(const Player Players[], const int numplayers){
+    int total = 0;
+    for(int i =0; i < numplayers; i++){
+        total = total + Players[i].getBookSize();
+    }
+    return (total);
+}
 
 
 
 int main( )
 {
     Deck testdeck;
-    Player Players[3];
+
+    int numplayers = 3;
+    Player Players[numplayers];
 
     Player Bob("Bob");
     Player Sam("Sam");
@@ -29,8 +38,10 @@ int main( )
     Players[1] = Sam;
     Players[2] = Joe;
 
-    int numplayers = 3;
     int turn = rand()%3;
+
+    totalbooks(Players[], numplayers);
+
 
 
 /* testing Card Class and Functions
