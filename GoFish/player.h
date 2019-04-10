@@ -76,6 +76,9 @@ public:
     //bool sameRankInHand(Card c) const;
     */
 
+    Player(const Player &p);
+
+
 
 private:
 

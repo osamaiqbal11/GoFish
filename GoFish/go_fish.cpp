@@ -18,6 +18,19 @@ void dealHand(Deck &d, Player &p, int numCards);
 
 int main( )
 {
+    Deck testdeck;
+    Player Players[3];
+
+    Player Bob("Bob");
+    Player Sam("Sam");
+    Player Joe("Joe");
+
+    cout<<Bob.getName()<<"\n";
+
+    Sam = Bob;
+
+    cout<< Sam.getName()<<"\n";
+    //Players[0] =
 /* testing Card Class and Functions
 
     Card testCard(2, Card::diamonds);

@@ -165,3 +165,11 @@ int Player::getBookSize() const{
 //e.g. will return true if the player has a 7d and the parameter is 7c
 
 //bool Player::sameRankInHand(Card c) const;
+
+
+Player::Player(const Player &p){
+    myHand = p.myHand;
+    myBook = p.myBook;
+    myName = p.myName;
+
+}
