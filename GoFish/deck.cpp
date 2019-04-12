@@ -1,5 +1,6 @@
 //deck.cpp
-#include <deck.h>
+#include "deck.h"
+#include "card.h"
 #include<iostream>
 #include<cstdlib>
 #include<stdio.h>

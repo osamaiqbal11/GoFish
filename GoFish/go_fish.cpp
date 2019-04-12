@@ -4,8 +4,8 @@
 #include <iostream>    // Provides myfile and cin
 #include <cstdlib>     // Provides EXIT_SUCCESS
 #include "card.h"
-#include "player.h"
 #include "deck.h"
+#include "player.h"
 #include <fstream>
 using namespace std;
 
@@ -25,7 +25,7 @@ int totalbooks(const Player Players[], const int numplayers){
 int main( )
 {
     ofstream  myfile;
-    myfile.open("GoFishPlaybyPlay.txt");
+    myfile.open("gofish_results.txt");
 
 
     Deck testdeck;

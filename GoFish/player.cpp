@@ -1,5 +1,8 @@
 //player.cpp
 #include "player.h"
+#include "card.h"
+#include "deck.h"
+#include <cstdlib>
 
 using namespace std;
 
