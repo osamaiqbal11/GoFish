@@ -125,6 +125,9 @@ string Card::rankString(int r)const{        // return "A", "2", ..."Q"
         c = r + '0';
 
     }
+    if(r == 10){
+        c = "10";
+    }
 
     return(c);
 }

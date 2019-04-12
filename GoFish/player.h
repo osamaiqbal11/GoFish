@@ -76,7 +76,7 @@ public:
     //bool sameRankInHand(Card c) const;
     */
 
-    Player(const Player &p);
+    Player& operator= (const Player &p);
 
 
 

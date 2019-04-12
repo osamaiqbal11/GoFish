@@ -66,7 +66,8 @@ Card Deck::dealCard() {        // get a card, after 52 are dealt, fail
         myIndex++;
         return (myCards[myIndex - 1]);
     } else {
-        return (myCards[0]);
+        Card trash(42, Card::spades);
+        return (trash);
     }
 }
 

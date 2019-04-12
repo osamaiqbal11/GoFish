@@ -22,180 +22,188 @@ int totalbooks(const Player Players[], const int numplayers){
 }
 
 
-
 int main( )
 {
     Deck testdeck;
 
-    int numplayers = 3;
+    testdeck.shuffle();
+
+    int numplayers = 2;
     Player Players[numplayers];
 
-    Player Bob("Bob");
-    Player Sam("Sam");
-    Player Joe("Joe");
-
-    Players[0] = Bob;
-    Players[1] = Sam;
-    Players[2] = Joe;
-
-    int turn = rand()%3;
-
-    totalbooks(Players[], numplayers);
-
-
-
-/* testing Card Class and Functions
-
-    Card testCard(2, Card::diamonds);
-
-    cout<<testCard.getRank()<<"\n";
-    cout<<testCard.suitString(testCard.getSuit())<<"\n";
-    testCard.setRank(1);
-    testCard.setSuit(Card::clubs);
-    cout<<testCard.toString()<<"\n";
-    cout<<testCard.rankString(testCard.getRank())<<"\n";
-    cout<<"yyyyyyyyyyyyyy\n";
-
-    Card test;
-    Card test2(3, Card::diamonds);
-    Card test3;
-
-    if(test.sameSuitAs(test3))
-        cout<<"test1 pass\n";
-    else{
-        cout<<"test 1 fail\n";
-    }
-
-    if(test == test2){
-        cout<<"test 2 fail\n";
-    }
-    else{
-        cout<<"test 2 pass\n";
-    }
-
-    if(test != test2){
-        cout<<"test 3 pass\n";
-    }
-
-    if(test == test3){
-        cout<<"test 4 pass\n";
-    }
-
-    */
-/*
-    Deck test;
-    Card testC;
-    test.shuffle();
-    int i = 0;
-    while(i<52) {
-        cout<<i+1<<":";
-        testC = test.dealCard();
-        cout << testC.toString() << "\n";
-        i++;
-    }
-*/
-/*
     int numCards = 7;
 
-    Deck Test;
-    Test.shuffle();
-
+    Player Josh("Josh");
     Player Billy("Billy");
-    Player Pops("Pops");
+    //Player Pop("Pop");
 
-    string Bname = Billy.getName();
-    string Pname = Pops.getName();
+    Players[0] = Josh;
+    Players[1] = Billy;
+    //Players[2] = Pop;
 
-    //cout<<Bname<<"\n";
-    //cout<<Pname<<"\n";
+    int turn = rand()%numplayers;
 
-    dealHand(Test, Billy, numCards);
-    dealHand(Test, Pops, numCards);
-
-
-    cout<<"Billy's Hand\n";
-    string bhand = Billy.showHand();
-    cout<< bhand<<"\n";
-    //cout<<"Billy's Books\n";
-    //cout<<Billy.showBooks();
-    cout<<"Pops' Hand\n";
-    string phand = Pops.showHand();
-    cout<<phand<<"\n";
-    //cout<<"Pops' Hand Size\n";
-    //cout<<Pops.getHandSize()<<"\n";
-
-
-    //Billy.addCard(Test.dealCard());
-    //bhand = Billy.showHand();
-    //cout<<"Billy's Hand\n";
-    //cout<< bhand<<"\n";
-
-*/
-/*
-    Card holder;
-    Card holder8;
-
-    while(Billy.checkHandForBook(holder, holder8)){
-        cout<<"Found a Pair\n";
-        cout<<holder.toString()<<"\n";
-        cout<<holder8.toString()<<"\n";
-        Card c = Billy.removeCardFromHand(holder);
-        Card u = Billy.removeCardFromHand(holder8);
-        cout<<"Billy's New Hand\n";
-        cout<<Billy.showHand()<<"\n";
-        Billy.bookCards(holder, holder8);
-        string bbook = Billy.showBooks();
-        cout<<"Billy's Books\n";
-        cout<<bbook<<"\n";
-        cout<<Billy.getBookSize()<<"\n";
+    //deal all hands
+    for(int i = 0; i < numplayers; i++){
+        dealHand(testdeck, Players[i], numCards);
+        cout<<Players[i].getName()<<"'s hand:\n"<<Players[i].showHand()<<"\n";
+    }
+    //checks initial hands for pairs
+    for(int i = 0;i < numplayers; i++){
+        Card u;
+        Card p;
+        cout<<Players[i].getName()<<"\n";
+        if(Players[i].checkHandForBook(u, p)){
+            cout<<"start pair\n";
+            cout<<u.toString()<<"\n";
+            cout<<p.toString()<<"\n";
+            u = Players[i].removeCardFromHand(u);
+            p = Players[i].removeCardFromHand(p);
+            Players[i].bookCards(u, p);
+            cout<< Players[i].getName()<<"'s books\n"<<Players[i].showBooks()<<"\n";
+            cout<<Players[i].getName()<<"'s new hand:\n"<<Players[i].showHand()<<"\n";
+        }
     }
 
-*/
-/*
-    Card temp = Test.dealCard();
-    Billy.addCard(temp);
-    Billy.showHand();
-    if( Billy.cardInHand(temp)){
-        cout<<"yes\n";
+
+
+
+
+
+
+
+
+    //Game Logic
+    while(totalbooks(Players, numplayers) != 52){   //when all cards are booked end game
+        cout<<Players[turn].getName()<<"'s turn\n";
+        Card currentCard = Players[turn].chooseCardFromHand();
+        cout<<Players[turn].getName()<<" picks: "<< currentCard.toString()<<"\n";
+        int askrecipient = rand()%numplayers;
+        //================================================================================
+        if(Players[askrecipient].getHandSize() == 0){
+            askrecipient++;
+            askrecipient = askrecipient%numplayers;
+        }
+        //================================================================================
+        if(askrecipient == turn){
+            askrecipient++;
+            askrecipient = askrecipient%numplayers;
+
+        }
+        cout<<Players[turn].getName()<<": ";
+        if(currentCard.getRank() != 1) {
+            cout << Players[askrecipient].getName() << " do you have a " << currentCard.rankString(currentCard.getRank())<<"\n";
+        }
+        if(currentCard.getRank() == 1){
+            cout << Players[askrecipient].getName() << " do you have an " << currentCard.rankString(currentCard.getRank())<<"\n";
+        }
+        if(Players[askrecipient].cardInHand(currentCard)){
+            cout<<Players[askrecipient].getName()<<": Yes\n";
+            Card pair = Players[askrecipient].removeCardFromHand(currentCard);
+            Card trash = Players[turn].removeCardFromHand(currentCard);
+            Players[turn].bookCards(currentCard, pair);
+            if((Players[turn].getHandSize() == 0) && (testdeck.size() != 0)){
+                Card drawn = testdeck.dealCard();
+                if(drawn.getRank() != 42) {
+                    Players[turn].addCard(drawn);
+                }
+            }
+            if((Players[turn].getHandSize() == 0) && (testdeck.size() == 0)){
+                turn++;
+                turn = turn % numplayers;
+            }
+            if((Players[askrecipient].getHandSize() == 0) && (testdeck.size() != 0)){
+                Card drawn = testdeck.dealCard();
+                if(drawn.getRank() != 42) {
+                    Players[askrecipient].addCard(drawn);
+                }
+            }
+            cout<<Players[turn].getName()<<"'s books:\n"<< Players[turn].showBooks()<<"\n";
+            cout<<Players[turn].getName()<<"'s new hand:"<<Players[turn].showHand()<<"\n";
+            cout<<Players[askrecipient].getName()<<"'s new hand: "<< Players[askrecipient].showHand()<<"\n";
+        }
+
+        else if(!Players[askrecipient].cardInHand(currentCard)){
+            cout<<Players[askrecipient].getName()<<": "<<"No, Go Fish\n";
+            Card drawn1 = testdeck.dealCard();
+            if(drawn1.getRank() != 42) {
+                Players[turn].addCard(drawn1);
+            }
+            cout<<Players[turn].getName()<<"'s new hand:\n"<<Players[turn].showHand()<<"\n";
+            Card pair1;
+            Card pair2;
+            cout<<Players[turn].getName()<<"'s hand\n"<<Players[turn].showHand()<<"\n";
+            if(Players[turn].checkHandForBook(pair1, pair2)){
+                Card trash_1 = Players[turn].removeCardFromHand(pair1);
+                Card trash_2 = Players[turn].removeCardFromHand(pair2);
+                Players[turn].bookCards(pair1, pair2);
+                cout<<Players[turn].getName()<<": Lucky Me!\n";
+                cout<<Players[turn].getName()<<"'s books\n"<< Players[turn].showBooks()<<"\n";
+                cout<< Players[turn].getName()<<"'s hand:\n"<< Players[turn].showHand()<<"\n";
+                if((Players[turn].getHandSize() == 0)&&(testdeck.size()!= 0)){
+                    cout<<Players[turn].getName()<<"Hand is empty!\n";
+                    drawn1 = testdeck.dealCard();
+                    if(drawn1.getRank() != 42) {
+                        Players[turn].addCard(drawn1);
+                    }
+                    cout<< Players[turn].getName()<<"'s hand:\n"<< Players[turn].showHand()<<"\n";
+
+                }
+
+            }
+            turn++;
+            turn = turn%numplayers;
+            if(Players[turn].getHandSize()== 0 && testdeck.size() == 0){
+                turn++;
+                turn = turn%numplayers;
+            }
+        }
     }
 
-*/
-/*
-    ---string getName() const;
-    //Remove the card c from the hand and return it to the caller
-    ----Card removeCardFromHand(Card c);
-    ----void addCard(Card c);  //adds a card to the hand
-    ----string showHand() const;
-    ----string showBooks() const;
-    ----int getHandSize() const;
-    ----int getBookSize() const;
-    ----Card chooseCardFromHand() const;
-
-    //Does the player have the card c in her hand?
-    ----bool cardInHand(Card c) const;
-
-    ----bool checkHandForBook(Card &c1, Card &c2);
-    ----void bookCards(Card c1, Card c2);
 
 
-*/
-/*
-    int numCards = 5;
 
-    Player p1("Joe");
-    Player p2("Jane");
 
-    Deck d;  //create a deck of cards
-    d.shuffle();
+    cout<<"Game Over\n";
 
-    dealHand(d, p1, numCards);
-    dealHand(d, p2, numCards);
+    //Decide Winner and Prints Books
+    for(int j; j < numplayers; j++){
+        cout<<Players[j].getName()<<"'s books:\n"<<Players[j].showBooks()<<"\n";
+    }
+    int condition = 0; // 1 if tie
+    int i = 0;
+    Player winner = Players[i];
+    Player winner2;
+    while(i < numplayers){
+        if(winner.getBookSize() < Players[i].getBookSize()){
+            winner = Players[i];
+            condition = 0;
+        }
+        if(winner.getBookSize() == Players[i].getBookSize()){
+            if(winner.getName() != Players[i].getName()){
+                winner2 = Players[i];
+                condition = 1;
+            }
+        }
+        i++;
+    }
+    if(condition == 1){
+        cout<<"It's a tie\n";
+        cout<<winner.getName()<<" and "<< winner2.getName()<<" both win with "<<(winner.getBookSize())/2<<" books"<<"!\n";
+        //cout<<winner.getName()<<"'s books:\n"<<winner.showBooks()<<"\n";
+        //cout<<winner2.getName()<<"'s books:\n"<<winner2.showBooks()<<"\n";
+    }
+    else{
+        cout<<"The winner is "<<winner.getName()<<" with "<<(winner.getBookSize())/2<<" books"<<"!\n";
+        //cout<<winner.getName()<<"'s books:\n"<<winner.showBooks()<<"\n";
+    }
 
-    cout << p1.getName() <<" has : \n" << p1.showHand() << endl;
-    cout << p2.getName() <<" has : \n" << p2.showHand() << endl;
+    for(int i = 0; i<numplayers;i++){
+        cout<<Players[i].getName()<<"'s Books:\n"<<Players[i].showBooks()<<"\n";
+    }
+
 
     return EXIT_SUCCESS;
-*/
 }
 
 

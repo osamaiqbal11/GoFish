@@ -43,27 +43,20 @@ void Player::bookCards(Card c1, Card c2){
 
 bool Player::checkHandForBook(Card &c1, Card &c2){
     int i = 0;
-    int j = 1;
-    if(this->myHand.size()== 1){
-        return(false);
-    }
-    else {
-        while(i < (this->myHand.size()-1)) {
-            while (j < this->myHand.size()) {
-                if (this->myHand[i].getRank() == this->myHand[j].getRank()) {
-                    if (this->myHand[i] != this->myHand[j]) {
-                        c1 = this->myHand[i];
-                        //cout << this->myHand[i].toString() << "\n";
-                        c2 = this->myHand[j];
-                        //cout << this->myHand[j].toString() << "\n";
-                        return (true);
-                    }
+    int j = i+1;
+    while(i < (this->getHandSize()-1)) {
+        while (j < this->getHandSize()) {
+            if (this->myHand[i].getRank() == this->myHand[j].getRank()) {
+                if(this->myHand[i] != this->myHand[j]) {
+                    c1 = this->myHand[i];
+                    c2 = this->myHand[j];
+                    return true;
                 }
-                j++;
             }
-            i++;
-            j = i++;
+        j++;
         }
+        i++;
+        j = i+1;
     }
     return(false);
 }
@@ -76,7 +69,7 @@ bool Player::checkHandForBook(Card &c1, Card &c2){
 //uses some strategy to choose one card from the player's
 //hand so they can say "Do you have a 4?"
 Card Player::chooseCardFromHand() const{
-    int random = rand()% this->myHand.size();
+    int random = rand()%this->myHand.size();
 
     return(myHand[random]);
 
@@ -104,13 +97,13 @@ bool Player::cardInHand(Card c) const{
 //Remove the card c from the hand and return it to the caller
 Card Player::removeCardFromHand(Card c){
     int i = 0;
-    while(myHand[i]!= c){
+    while(myHand[i].getRank()!= c.getRank()){
         i++;
     }
     Card hold = myHand[i];
     myHand.erase(myHand.begin()+i);
 
-    return(c);
+    return(hold);
 }
 
 string Player::showHand() const{
@@ -167,9 +160,9 @@ int Player::getBookSize() const{
 //bool Player::sameRankInHand(Card c) const;
 
 
-Player::Player(const Player &p){
+Player& Player::operator =(const Player &p){
     myHand = p.myHand;
     myBook = p.myBook;
     myName = p.myName;
-
+    return (*this);
 }
