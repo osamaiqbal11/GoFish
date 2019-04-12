@@ -1,0 +1,473 @@
+Josh's hand:
+AcJdJs2s9hKhQc
+Billy's hand:
+8s3c6d6cKc8cAd
+Josh
+start pair
+Jd
+Js
+Josh's books
+JdJs
+Josh's new hand:
+Ac2s9hKhQc
+Billy
+start pair
+8s
+8c
+Billy's books
+8s8c
+Billy's new hand:
+3c6d6cKcAd
+Josh's turn
+Josh picks: Ac
+Josh: Billy do you have an A
+Billy: Yes
+Josh's books:
+JdJsAcAd
+Josh's new hand:2s9hKhQc
+Billy's new hand: 3c6d6cKc
+Josh's turn
+Josh picks: Qc
+Josh: Billy do you have a Q
+Billy: No, Go Fish
+Josh's new hand:
+2s9hKhQc4c
+Josh's hand
+2s9hKhQc4c
+Billy's turn
+Billy picks: Kc
+Billy: Josh do you have a K
+Josh: Yes
+Billy's books:
+8s8cKcKh
+Billy's new hand:3c6d6c
+Josh's new hand: 2s9hQc4c
+Billy's turn
+Billy picks: 6d
+Billy: Josh do you have a 6
+Josh: No, Go Fish
+Billy's new hand:
+3c6d6cJh
+Billy's hand
+3c6d6cJh
+Billy: Lucky Me!
+Billy's books
+8s8cKcKh6d6c
+Billy's hand:
+3cJh
+Josh's turn
+Josh picks: 4c
+Josh: Billy do you have a 4
+Billy: No, Go Fish
+Josh's new hand:
+2s9hQc4c9s
+Josh's hand
+2s9hQc4c9s
+Josh: Lucky Me!
+Josh's books
+JdJsAcAd9h9s
+Josh's hand:
+2sQc4c
+Billy's turn
+Billy picks: 3c
+Billy: Josh do you have a 3
+Josh: No, Go Fish
+Billy's new hand:
+3cJh5c
+Billy's hand
+3cJh5c
+Josh's turn
+Josh picks: 4c
+Josh: Billy do you have a 4
+Billy: No, Go Fish
+Josh's new hand:
+2sQc4c6h
+Josh's hand
+2sQc4c6h
+Billy's turn
+Billy picks: Jh
+Billy: Josh do you have a J
+Josh: No, Go Fish
+Billy's new hand:
+3cJh5c2d
+Billy's hand
+3cJh5c2d
+Josh's turn
+Josh picks: Qc
+Josh: Billy do you have a Q
+Billy: No, Go Fish
+Josh's new hand:
+2sQc4c6h4d
+Josh's hand
+2sQc4c6h4d
+Josh: Lucky Me!
+Josh's books
+JdJsAcAd9h9s4c4d
+Josh's hand:
+2sQc6h
+Billy's turn
+Billy picks: 5c
+Billy: Josh do you have a 5
+Josh: No, Go Fish
+Billy's new hand:
+3cJh5c2d5h
+Billy's hand
+3cJh5c2d5h
+Billy: Lucky Me!
+Billy's books
+8s8cKcKh6d6c5c5h
+Billy's hand:
+3cJh2d
+Josh's turn
+Josh picks: Qc
+Josh: Billy do you have a Q
+Billy: No, Go Fish
+Josh's new hand:
+2sQc6h5d
+Josh's hand
+2sQc6h5d
+Billy's turn
+Billy picks: 2d
+Billy: Josh do you have a 2
+Josh: Yes
+Billy's books:
+8s8cKcKh6d6c5c5h2d2s
+Billy's new hand:3cJh
+Josh's new hand: Qc6h5d
+Billy's turn
+Billy picks: 3c
+Billy: Josh do you have a 3
+Josh: No, Go Fish
+Billy's new hand:
+3cJh10c
+Billy's hand
+3cJh10c
+Josh's turn
+Josh picks: Qc
+Josh: Billy do you have a Q
+Billy: No, Go Fish
+Josh's new hand:
+Qc6h5dQd
+Josh's hand
+Qc6h5dQd
+Josh: Lucky Me!
+Josh's books
+JdJsAcAd9h9s4c4dQcQd
+Josh's hand:
+6h5d
+Billy's turn
+Billy picks: 3c
+Billy: Josh do you have a 3
+Josh: No, Go Fish
+Billy's new hand:
+3cJh10cKd
+Billy's hand
+3cJh10cKd
+Josh's turn
+Josh picks: 5d
+Josh: Billy do you have a 5
+Billy: No, Go Fish
+Josh's new hand:
+6h5dAh
+Josh's hand
+6h5dAh
+Billy's turn
+Billy picks: Jh
+Billy: Josh do you have a J
+Josh: No, Go Fish
+Billy's new hand:
+3cJh10cKdJc
+Billy's hand
+3cJh10cKdJc
+Billy: Lucky Me!
+Billy's books
+8s8cKcKh6d6c5c5h2d2sJhJc
+Billy's hand:
+3c10cKd
+Josh's turn
+Josh picks: 6h
+Josh: Billy do you have a 6
+Billy: No, Go Fish
+Josh's new hand:
+6h5dAhKs
+Josh's hand
+6h5dAhKs
+Billy's turn
+Billy picks: 10c
+Billy: Josh do you have a 10
+Josh: No, Go Fish
+Billy's new hand:
+3c10cKd9c
+Billy's hand
+3c10cKd9c
+Josh's turn
+Josh picks: 6h
+Josh: Billy do you have a 6
+Billy: No, Go Fish
+Josh's new hand:
+6h5dAhKsAs
+Josh's hand
+6h5dAhKsAs
+Josh: Lucky Me!
+Josh's books
+JdJsAcAd9h9s4c4dQcQdAhAs
+Josh's hand:
+6h5dKs
+Billy's turn
+Billy picks: Kd
+Billy: Josh do you have a K
+Josh: Yes
+Billy's books:
+8s8cKcKh6d6c5c5h2d2sJhJcKdKs
+Billy's new hand:3c10c9c
+Josh's new hand: 6h5d
+Billy's turn
+Billy picks: 9c
+Billy: Josh do you have a 9
+Josh: No, Go Fish
+Billy's new hand:
+3c10c9c8d
+Billy's hand
+3c10c9c8d
+Josh's turn
+Josh picks: 5d
+Josh: Billy do you have a 5
+Billy: No, Go Fish
+Josh's new hand:
+6h5d3d
+Josh's hand
+6h5d3d
+Billy's turn
+Billy picks: 9c
+Billy: Josh do you have a 9
+Josh: No, Go Fish
+Billy's new hand:
+3c10c9c8d7h
+Billy's hand
+3c10c9c8d7h
+Josh's turn
+Josh picks: 3d
+Josh: Billy do you have a 3
+Billy: Yes
+Josh's books:
+JdJsAcAd9h9s4c4dQcQdAhAs3d3c
+Josh's new hand:6h5d
+Billy's new hand: 10c9c8d7h
+Josh's turn
+Josh picks: 5d
+Josh: Billy do you have a 5
+Billy: No, Go Fish
+Josh's new hand:
+6h5d10d
+Josh's hand
+6h5d10d
+Billy's turn
+Billy picks: 10c
+Billy: Josh do you have a 10
+Josh: Yes
+Billy's books:
+8s8cKcKh6d6c5c5h2d2sJhJcKdKs10c10d
+Billy's new hand:9c8d7h
+Josh's new hand: 6h5d
+Billy's turn
+Billy picks: 7h
+Billy: Josh do you have a 7
+Josh: No, Go Fish
+Billy's new hand:
+9c8d7h10s
+Billy's hand
+9c8d7h10s
+Josh's turn
+Josh picks: 5d
+Josh: Billy do you have a 5
+Billy: No, Go Fish
+Josh's new hand:
+6h5dQs
+Josh's hand
+6h5dQs
+Billy's turn
+Billy picks: 8d
+Billy: Josh do you have a 8
+Josh: No, Go Fish
+Billy's new hand:
+9c8d7h10sQh
+Billy's hand
+9c8d7h10sQh
+Josh's turn
+Josh picks: 5d
+Josh: Billy do you have a 5
+Billy: No, Go Fish
+Josh's new hand:
+6h5dQs7d
+Josh's hand
+6h5dQs7d
+Billy's turn
+Billy picks: 9c
+Billy: Josh do you have a 9
+Josh: No, Go Fish
+Billy's new hand:
+9c8d7h10sQh9d
+Billy's hand
+9c8d7h10sQh9d
+Billy: Lucky Me!
+Billy's books
+8s8cKcKh6d6c5c5h2d2sJhJcKdKs10c10d9c9d
+Billy's hand:
+8d7h10sQh
+Josh's turn
+Josh picks: 7d
+Josh: Billy do you have a 7
+Billy: Yes
+Josh's books:
+JdJsAcAd9h9s4c4dQcQdAhAs3d3c7d7h
+Josh's new hand:6h5dQs
+Billy's new hand: 8d10sQh
+Josh's turn
+Josh picks: 6h
+Josh: Billy do you have a 6
+Billy: No, Go Fish
+Josh's new hand:
+6h5dQs2c
+Josh's hand
+6h5dQs2c
+Billy's turn
+Billy picks: Qh
+Billy: Josh do you have a Q
+Josh: Yes
+Billy's books:
+8s8cKcKh6d6c5c5h2d2sJhJcKdKs10c10d9c9dQhQs
+Billy's new hand:8d10s
+Josh's new hand: 6h5d2c
+Billy's turn
+Billy picks: 8d
+Billy: Josh do you have a 8
+Josh: No, Go Fish
+Billy's new hand:
+8d10s7c
+Billy's hand
+8d10s7c
+Josh's turn
+Josh picks: 5d
+Josh: Billy do you have a 5
+Billy: No, Go Fish
+Josh's new hand:
+6h5d2c4s
+Josh's hand
+6h5d2c4s
+Billy's turn
+Billy picks: 8d
+Billy: Josh do you have a 8
+Josh: No, Go Fish
+Billy's new hand:
+8d10s7c5s
+Billy's hand
+8d10s7c5s
+Josh's turn
+Josh picks: 5d
+Josh: Billy do you have a 5
+Billy: Yes
+Josh's books:
+JdJsAcAd9h9s4c4dQcQdAhAs3d3c7d7h5d5s
+Josh's new hand:6h2c4s
+Billy's new hand: 8d10s7c
+Josh's turn
+Josh picks: 2c
+Josh: Billy do you have a 2
+Billy: No, Go Fish
+Josh's new hand:
+6h2c4s6s
+Josh's hand
+6h2c4s6s
+Josh: Lucky Me!
+Josh's books
+JdJsAcAd9h9s4c4dQcQdAhAs3d3c7d7h5d5s6h6s
+Josh's hand:
+2c4s
+Billy's turn
+Billy picks: 10s
+Billy: Josh do you have a 10
+Josh: No, Go Fish
+Billy's new hand:
+8d10s7c4h
+Billy's hand
+8d10s7c4h
+Josh's turn
+Josh picks: 4s
+Josh: Billy do you have a 4
+Billy: Yes
+Josh's books:
+JdJsAcAd9h9s4c4dQcQdAhAs3d3c7d7h5d5s6h6s4s4h
+Josh's new hand:2c
+Billy's new hand: 8d10s7c
+Josh's turn
+Josh picks: 2c
+Josh: Billy do you have a 2
+Billy: No, Go Fish
+Josh's new hand:
+2c2h
+Josh's hand
+2c2h
+Josh: Lucky Me!
+Josh's books
+JdJsAcAd9h9s4c4dQcQdAhAs3d3c7d7h5d5s6h6s4s4h2c2h
+Josh's hand:
+
+JoshHand is empty!
+Josh's hand:
+3s
+Billy's turn
+Billy picks: 7c
+Billy: Josh do you have a 7
+Josh: No, Go Fish
+Billy's new hand:
+8d10s7c10h
+Billy's hand
+8d10s7c10h
+Billy: Lucky Me!
+Billy's books
+8s8cKcKh6d6c5c5h2d2sJhJcKdKs10c10d9c9dQhQs10s10h
+Billy's hand:
+8d7c
+Josh's turn
+Josh picks: 3s
+Josh: Billy do you have a 3
+Billy: No, Go Fish
+Josh's new hand:
+3s8h
+Josh's hand
+3s8h
+Billy's turn
+Billy picks: 7c
+Billy: Josh do you have a 7
+Josh: No, Go Fish
+Billy's new hand:
+8d7c7s
+Billy's hand
+8d7c7s
+Billy: Lucky Me!
+Billy's books
+8s8cKcKh6d6c5c5h2d2sJhJcKdKs10c10d9c9dQhQs10s10h7c7s
+Billy's hand:
+8d
+Josh's turn
+Josh picks: 8h
+Josh: Billy do you have a 8
+Billy: Yes
+Josh's books:
+JdJsAcAd9h9s4c4dQcQdAhAs3d3c7d7h5d5s6h6s4s4h2c2h8h8d
+Josh's new hand:3s
+Billy's new hand: 3h
+Josh's turn
+Josh picks: 3s
+Josh: Billy do you have a 3
+Billy: Yes
+Billy's books:
+8s8cKcKh6d6c5c5h2d2sJhJcKdKs10c10d9c9dQhQs10s10h7c7s
+Billy's new hand:
+Billy's new hand: 
+Game Over
+The winner is Josh with 14 books!
+Josh's Books:
+JdJsAcAd9h9s4c4dQcQdAhAs3d3c7d7h5d5s6h6s4s4h2c2h8h8d3s3h
+Billy's Books:
+8s8cKcKh6d6c5c5h2d2sJhJcKdKs10c10d9c9dQhQs10s10h7c7s
